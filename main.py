@@ -20,7 +20,7 @@ def toggle_event(key):
         clicking = not clicking
 
 
-click_thread = threading.Thread(target= clicker)t
+click_thread = threading.Thread(target= clicker)
 click_thread.start()
 
 with Listener(on_press= toggle_event) as listener:
