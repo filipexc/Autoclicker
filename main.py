@@ -2,9 +2,11 @@ import time
 import threading
 from pynput.keyboard import Listener, KeyCode
 from pynput.mouse import Controller , Button
+from janela import TelaPython
 
-Toggle_key = KeyCode(char='t')
 
+Toggle_key = KeyCode(char= 't')
+print(Toggle_key)
 clicking = False
 mouse = Controller()
 
@@ -13,7 +15,7 @@ def clicker():
         if clicking:
             mouse.click(Button.left , 1)
         time.sleep(0.0001)
-      
+    
 def toggle_event(key):
     if key == Toggle_key:
         global clicking
