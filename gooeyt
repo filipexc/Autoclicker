@@ -1,0 +1,16 @@
+import gooeypie as gp
+
+app = gp.GooeyPieApp('Clicker')
+app.width = 500
+
+def say_foi(event):
+    confirm_lbl.text = 'Foi'
+
+confirm_btn = gp.Button(app , 'Confirmar', say_foi)
+confirm_lbl = gp.Label(app, '')
+
+app.set_grid(2, 1)
+app.add(confirm_btn, 1, 1 , align='center')
+app.add(confirm_lbl, 2, 1 , align='center')
+
+app.run()
